@@ -9,3 +9,4 @@ if __name__ == '__main__':
                 'https://en.wikipedia.org/wiki/Bradie_Tennell', 'https://en.wikipedia.org/wiki/Fame_for_15',
                 'https://en.wikipedia.org/wiki/Bali_tiger']
     start = articles.Article(url_list[0])
+    print(start.hyperlink_list)
