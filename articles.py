@@ -23,7 +23,7 @@ class Article:
         # Banned list filters common non article pages that make it through regex filtering, list is probably non
         # exhaustive and leaves rom for false positive bans
         # TODO: Review banned list and/or come up with more accurate alternatives
-        banned_list = "Category, Wikipedia, Template, Template_talk, Help"
+        banned_list = "Category, Wikipedia, Template, Template_talk, Help, commons, Talk"
         banned_list = banned_list.split(', ')
         # Initial searching found %#\"?&;=/ symbols to indicators of non article pages, update as findings change
         # Regex strips partial tags of banned pages down to a recognizable form
@@ -67,5 +67,5 @@ class Article:
             hyperlink_list.append(holder)
         return hyperlink_list
 
-    def create_wiki_link(self, partial):
-        return 'https://en.wikipedia.org/wiki/' + partial
+def create_wiki_link(partial):
+    return 'https://en.wikipedia.org/wiki/' + partial
