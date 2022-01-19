@@ -16,12 +16,12 @@ def depth_search(start, target, max_depth, current_depth=0):
             print(' '*current_depth, f'Can not dive deeper, {current_article.partial}')
             current_article.distance_to_target = float('inf')
             return
-        if current_article.article_name in search_basket: #
-            print('PING')
-            return
+        # if current_article.article_name in search_basket: #
+        #    print('PING')
+        #    return
 
         successor = depth_search(current_article, target, max_depth=max_depth, current_depth=current_depth+1) # Search continues, got to next deep link
-        search_basket.add(current_article.article_name)
+        # search_basket.add(current_article.article_name)
 
         if successor is None: # Search came back empty handed, go to next partial in list
             continue
