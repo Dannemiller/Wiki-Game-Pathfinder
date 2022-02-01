@@ -46,12 +46,9 @@ def depth_search_async(current, target, max_depth, current_depth=0):
         if item.article_name == target.article_name:
             print('Target found rising')
             return target.article_name
-        elif current_depth <= max_depth:
+        elif next_depth <= max_depth:
             print(f'Diving {item.article_name}')
             found = depth_search_async(item, target, max_depth, next_depth)
-        else:
-            print('No target rising')
-            return
 
         if found is not None:
             if next_depth < current.distance_to_target:
@@ -59,3 +56,5 @@ def depth_search_async(current, target, max_depth, current_depth=0):
                 current.next_article = found
         # Program is memory intensive, need to free up as much as possible during runtime
         current.article_list[spot] = None
+    return
+
