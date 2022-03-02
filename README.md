@@ -4,5 +4,5 @@ Current state creates an Article object that will be used during search for targ
 WIP List:
   Create depth first search: Set initial depth that updates if path shorter than current depth is found. Execpted best use for loosely connected start and end
   Create breadth first search. Expected best use for strongly connected start and end
-  Optomize memory usage: Storing all articles during search will use waste a lot of space (ex. wiki/World_War_II cointains 2,160 hyperlinks as of current scan) as number of children articles grow needed space will grow
+  Optomize memory usage: Storing all articles during search will use waste a lot of space (ex. wiki/World_War_II cointains 1,281 hyperlinks as of current scan) as number of children articles grow needed space will grow
   GUI: Once program is able to reliably find target articles create UI outside of terminal for ease of use
