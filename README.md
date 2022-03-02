@@ -15,7 +15,9 @@ GUI basics have been started. Start and target URLs can be passed to program thr
 
 WIP List:
 
-Scrap depth first search: Depth first is overly complicated, has several features that either don't work or actively fight against the overall success of the search. Either I need to abandon it (current top choice), or completely rebuild it from the ground up. For depth first to work I think some context would be needed since how far you want to search depends on how closely related the start and target are.
+Scrap depth first search: Depth first is overly complicated, has several features that either don't work or actively fight against the overall success of the search. Either I need to abandon it (current top choice), or completely rebuild it from the ground up. For depth first to work I think some context would be needed since how far you want to search depends on how closely related the start and target are. 
+
+**EDIT for section "Scrap depth first search": As noted in section "Comments and Documentation" I've forgotten a lot of details, includeing the fact that BREADTH SEARCH DEPENDS ON DEPTH SEARCH so scrapping it isn't an option until I remove that dependency.**
 
 GUI expansion and refinement: Current GUI is a single static window, text can be entered but everything else besides input is handled in terminal. Need at least 3 more screens for GUI. Planned screens are: Input screen (rough draft), processing/searching screen (non existent), end screen (non existent), options screen (non existent)
 
