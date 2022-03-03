@@ -1,17 +1,17 @@
-import articles
-import search
+# import articles
+# import search
 import cProfile
 import pstats
-import requests
+# import requests
+# import snakeviz
 from GUI import gui_main
 
 
-def test_main():
-    start = articles.ArticleAsync(requests.get('https://en.wikipedia.org/wiki/Karla_Ratnagiri'))
-    search.create_article_list(start)
-    for i in start.article_list:
-        print(i.article_name)
-
-
 if __name__ == '__main__':
-    gui_main()
+    with cProfile.Profile() as pr:
+        gui_main()
+
+    stats = pstats.Stats(pr)
+    stats.sort_stats(pstats.SortKey.TIME)
+    # stats.print_stats()
+    stats.dump_stats(filename='needs_profiling.prof')
